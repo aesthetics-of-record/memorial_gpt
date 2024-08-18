@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} 
+
+{% block title %} Detail {% endblock %} 
+
+{%block content %}
+<div class="p-4">
+    <h1 style="margin-bottom: 16px; font-family: 'Diphylleia',serif;">My Memory</h1>
+    <button type="button" class="btn btn-primary" id="update_btn">수정완료</button>
+    <button type="button" class="btn btn-danger" id="delete_btn">삭제하기</button>
+
+    <div>{{ post.date }}</div>
+    <div class="input-group mb-3">
+        <span class="input-group-text">제목</span>
+        <input type="text" class="form-control" placeholder="제목" aria-label="Title" aria-describedby="title" value="{{ post.title }}" id="detail_title">
+    </div>
+
+    <textarea id="detail_content" class="form-control" style="height: 400px;" aria-label="With textarea">{{ post.content }}</textarea>
+</div>
+
+
+{% endblock%}
